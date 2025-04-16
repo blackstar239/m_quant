@@ -14,7 +14,8 @@ export const API_ENDPOINTS = {
     futuresInventory: `${API_BASE_URL}/market/futures/inventory`,
     inventory: `${API_BASE_URL}/market/inventory`,
     technical: `${API_BASE_URL}/market/technical`,
-    historical: `${API_BASE_URL}/market/futures/historical`
+    historical: `${API_BASE_URL}/market/futures/historical`,
+    monthlyProbability: `${API_BASE_URL}/market/futures/monthly-probability`
   },
   analysis: {
     fundamental: `${API_BASE_URL}/fundamental/analysis`,
@@ -39,5 +40,10 @@ export const API_ENDPOINTS = {
   obvAdxEma: {
     data: `${API_BASE_URL}/obv_adx_ema/data`,
     backtest: `${API_BASE_URL}/obv_adx_ema/backtest`
+  },
+  news: {
+    daily: `${API_BASE_URL}/news/daily`,
+    analysis: `${API_BASE_URL}/news/analysis`,
+    analyze: `${API_BASE_URL}/news/analyze`
   }
 }; 

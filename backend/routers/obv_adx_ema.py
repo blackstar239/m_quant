@@ -42,8 +42,6 @@ def load_and_process_data(file_path):
         df['obv'] = df['obv'].fillna(method='ffill').fillna(method='bfill')
         df['obv_ma30'] = df['obv_ma30'].fillna(method='ffill').fillna(method='bfill')
 
-        logger.info(f"数据: {df.to_string()}")
-        
         logger.debug(f"数据中是否还存在NaN值: {df.isna().any().any()}")
         
         # 按时间升序排序
@@ -71,7 +69,7 @@ def load_and_process_data(file_path):
 @router.get("/data")
 async def get_data():
     logger.info("收到OBV、ADX与EMA组合策略数据请求")
-    data_path = Path("data/M2505.DCE_future_60min_20240101_20251231.csv")
+    data_path = Path("data/M2501.DCE_future_60min_20240101_20251231.csv")
     logger.debug(f"60分钟数据文件路径: {data_path.absolute()}")
     return load_and_process_data(data_path)
 
@@ -82,7 +80,7 @@ async def backtest_strategy():
         logger.info("收到OBV、ADX与EMA组合策略回测请求")
         
         # 加载数据
-        data_path = Path("data/M2505.DCE_future_60min_20240101_20251231.csv")
+        data_path = Path("data/M2501.DCE_future_60min_20240101_20251231.csv")
         
         # 读取并处理数据
         df_60min = pd.read_csv(data_path)

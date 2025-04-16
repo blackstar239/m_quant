@@ -50,7 +50,7 @@ const StrategyCard: React.FC<StrategyCardProps> = ({ title, tags, icon, children
         </div>
         <div 
           className={`transition-all duration-300 ease-in-out ${
-            isExpanded ? 'max-h-[10000px] opacity-100' : 'max-h-0 opacity-0'
+            isExpanded ? 'max-h-[20000px] opacity-100' : 'max-h-0 opacity-0'
           } overflow-hidden`}
         >
           <div className="p-6">
@@ -76,7 +76,7 @@ const Trading: React.FC = () => {
         </div>
 
         <StrategyCard
-          title="豆粕均线趋势跟随策略（以M2505合约为例）"
+          title="豆粕均线趋势跟随策略（以M2501合约为例）"
           tags={[
             { text: "趋势策略", color: "text-blue-800 bg-blue-100" },
             { text: "已回测", color: "text-green-800 bg-green-100" }
@@ -87,7 +87,7 @@ const Trading: React.FC = () => {
         </StrategyCard>
 
         <StrategyCard
-          title="豆粕ETF金叉做多策略"
+          title="豆粕ETF（159985）金叉做多策略"
           tags={[
             { text: "技术面策略", color: "text-blue-800 bg-blue-100" },
             { text: "已回测", color: "text-green-800 bg-green-100" }
@@ -110,7 +110,7 @@ const Trading: React.FC = () => {
         </StrategyCard>
 
         <StrategyCard
-          title="OBV-ADX-EMA组合策略"
+          title="OBV-EMA组合策略"
           tags={[
             { text: "技术面策略", color: "text-blue-800 bg-blue-100" },
             { text: "趋势跟踪", color: "text-purple-800 bg-purple-100" },

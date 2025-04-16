@@ -15,3 +15,11 @@ loguru
 akshare
 httpx
 openai
+beautifulsoup4
+aiohttp
+langchain_core
+langgraph
+questionary
+langchain_openai
+langchain_ollama
+langchain_deepseek
